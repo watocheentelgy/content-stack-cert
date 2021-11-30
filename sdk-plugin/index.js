@@ -5,6 +5,11 @@ const Stack = contentstack.Stack({
   delivery_token: process.env.DELIVERY_TOKEN,
   environment: process.env.VERCEL_ENV ? process.env.VERCEL_ENV : process.env.ENVIRONMENT,
   region: process.env.REGION ? process.env.REGION : "us",
+  live_preview: {
+    management_token: process.env.MANAGEMENT_TOKEN,
+    enable: true,
+    host: 'api.contentstack.io'
+  },
 });
 
 if (process.env.CUSTOM_HOST) {

@@ -3,6 +3,7 @@ import Stack from "../sdk-plugin/index";
 import RenderComponents from "../components/render-components";
 import Footer from "../components/footer";
 import Link from 'next/link';
+import "@contentstack/live-preview-utils/dist/main.css";
 
 export default function Home(props) {
   const { webInfo, resultPage } = props;
