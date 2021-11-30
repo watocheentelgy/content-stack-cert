@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Stack from "../sdk-plugin/index";
 import RenderComponents from "../components/render-components";
+import Footer from "../components/footer";
 import Link from 'next/link';
 
 export default function Home(props) {
@@ -61,11 +62,7 @@ export default function Home(props) {
         />
       )}
 
-      <div className="copyright_section">
-        <div className="container">
-          <p className="copyright">{webInfo.footer.rights_reserved} <img src={webInfo.footer.image.url} alt={webInfo.title} width="72" height="16" /></p>
-        </div>
-      </div>
+      <Footer webInfo={webInfo} />
     </div>
   )
 }
