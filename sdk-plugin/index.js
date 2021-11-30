@@ -3,7 +3,7 @@ const contentstack = require("contentstack");
 const Stack = contentstack.Stack({
   api_key: process.env.API_KEY,
   delivery_token: process.env.DELIVERY_TOKEN,
-  environment: process.env.ENVIRONMENT,
+  environment: process.env.VERCEL_ENV ? process.env.VERCEL_ENV : process.env.ENVIRONMENT,
   region: process.env.REGION ? process.env.REGION : "us",
 });
 
