@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Stack from "../sdk-plugin/index";
 import RenderComponents from "../components/render-components";
+import Link from 'next/link';
 
 export default function Home(props) {
   const { webInfo, resultPage } = props;
@@ -27,7 +28,11 @@ export default function Home(props) {
         <div className="container">
           <div className="row">
             <div className="col-sm-6 col-lg-3">
-              <div className="logo"><a href="/"><img src={webInfo.logo.url} /></a></div>
+              <div className="logo">
+                <Link href="/">
+                  <a><img src={webInfo.logo.url} /></a>
+                </Link>
+              </div>
             </div>
             <div className="col-sm-6 col-lg-9">
               <div className="menu_text">
