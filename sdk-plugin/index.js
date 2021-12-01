@@ -18,7 +18,12 @@ if (process.env.CUSTOM_HOST) {
   Stack.setHost(process.env.CUSTOM_HOST);
 }
 
-ContentstackLivePreview.init({enable: true, stackSdk: Stack, ssr:false});
+ContentstackLivePreview.init({
+  enable: true,
+  stackDetails: {
+    apiKey: "bltdd864dc0907fe3cc",
+  },
+});
 
 export default {
   /**
