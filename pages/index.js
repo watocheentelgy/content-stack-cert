@@ -9,12 +9,12 @@ import "@contentstack/live-preview-utils/dist/main.css";
 
 export default function Home(props) {
   const { webInfo, resultPage } = props;
-
   ContentstackLivePreview.init({
     enable: true,
     stackDetails: {
       apiKey: "bltdd864dc0907fe3cc",
     },
+    stackSdk: Stack, ssr:false
   });
 
   return (
