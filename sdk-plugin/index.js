@@ -1,3 +1,5 @@
+import ContentstackLivePreview from "@contentstack/live-preview-utils";
+
 const contentstack = require("contentstack");
 
 const Stack = contentstack.Stack({
@@ -15,6 +17,9 @@ const Stack = contentstack.Stack({
 if (process.env.CUSTOM_HOST) {
   Stack.setHost(process.env.CUSTOM_HOST);
 }
+
+ContentstackLivePreview.init({enable: true, stackSdk: Stack, ssr:false});
+
 export default {
   /**
    *
