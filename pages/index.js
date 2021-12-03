@@ -3,19 +3,9 @@ import Stack from "../sdk-plugin/index";
 import RenderComponents from "../components/render-components";
 import Footer from "../components/footer";
 import Link from 'next/link';
-import ContentstackLivePreview from "@contentstack/live-preview-utils";
-
-import "@contentstack/live-preview-utils/dist/main.css";
 
 export default function Home(props) {
   const { webInfo, resultPage } = props;
-  ContentstackLivePreview.init({
-    enable: true,
-    stackDetails: {
-      apiKey: "bltdd864dc0907fe3cc",
-    },
-    stackSdk: Stack, ssr:false
-  });
 
   return (
     <div>
