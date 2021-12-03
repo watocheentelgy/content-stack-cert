@@ -7,7 +7,7 @@ export default function OurTaxisSection(props) {
   const ourTaxis = props.ourTaxisBanner;
   const webInfo = props.webInfo;
   return (
-    <div className="taxis_section layout_padding" style={{backgroundColor: webInfo.background_color_web}}>
+    <div id={ourTaxis.id_anchor} className="taxis_section layout_padding" style={{backgroundColor: webInfo.background_color_web}}>
       <div className="container">
         <h1 className="our_text">{ReactHtmlParser(ourTaxis.title)}</h1>
         <div className="taxis_section_2">
